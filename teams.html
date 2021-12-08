@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <title>Teams</title>
+    <style>
+        body {
+            margin-left: 300px;
+            margin-top: 30px;
+        }
+
+        #myTable tbody tr:first-of-type td{
+            border-spacing: 30px ;
+        }
+
+        #myTable tbody tr td{
+            cursor: move;
+            padding-left: 20px;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <input type="number" name="number" id="number" >
+        <button onclick="create_table()">Submit</button>
+        <!-- <button id="btn">Submit</button> -->
+    </div>
+    <table id="myTable" draggable="true">
+        
+    </table>
+
+
+
+    <script>
+
+        
+
+
+        function create_table() {
+            
+
+            for(i=1; i<=document.getElementById("number").value * 2 ; i++) {
+                var table = document.getElementById("myTable");
+
+                var row = table.insertRow(0);
+                var new_table = document.createElement("table");
+                new_table.textContent = "team"
+                var cell1 = row.insertCell(0);
+               
+                // var cell3 = row.insertCell(1);
+                cell1.innerHTML = "player" + i;
+                // cell2.innerHTML = "team1";
+                // cell3.innerHTML = "team1";
+
+                // for(j=0; j<=document.getElementById("number").value; j++) {
+                //     document.createElement = cell[j].insertCell(j);
+                //     cell[j].innerHTML = "play" + j;
+                // }
+
+            }
+
+            for(j=1; j<=document.getElementById("number").value; j++) {
+                var cell2 = row.insertCell(j);
+                cell2.innerHTML = "team" + j;
+            }
+
+ 
+            var b = document.querySelectorAll("td");
+
+            b.setAttribute("class", "drgndrp");
+            b.setAttribute("draggable", "true");
+            
+       
+
+        }    
+    </script>
+
+
+</body>
+</html>
