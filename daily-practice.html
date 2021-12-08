@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3 id="demo"></h3>
+    <p id="para"></p>
+    <p id="demo2">hello</p>
+    <button onclick="document.getElementById('demo').innerHTML= 'PARA CHANGED'">print</button>
+
+
+    <script>
+
+        // 7th december intro, statements, syntax, variable
+
+        // alert("hello kiraz")
+        // var x, y, z;
+        // x = 5;
+        // y = 10;
+        // z = x + y;
+
+        // with let we can not redeclare
+        // let x = 5;
+        // let x = 8;
+
+         
+        var x = 50;
+        var x , y = 5, z = x + y;
+
+        // const food = ["pasta", "maggie", "nachos", "burger"];
+        // food.push("noodle");
+        // food[0] = "cake";
+
+        const party = {
+            drink:"mocktail", 
+            food:"italian"
+        };
+        party.food = "continental";
+
+        // document.getElementById("demo").innerHTML = party.food;
+        document.getElementById("demo").innerHTML = z;
+        document.getElementById("demo2").innerHTML =" changed the para";
+        // console.log(document.getElementById('demo').innerText = party)
+
+
+        // 7th december intro, statements, syntax, variable
+
+        // var p = 10;
+        // var q = 2;
+        // p **= q;
+        // // p -= q;
+        // document.getElementById("para").innerHTML = p;
+
+        // var p = "what  ";
+        // var s = 'apple  '
+        // var q = `is this`;
+        // var r = p + s + q;
+        // r += " you eat"
+        // document.getElementById("demo").innerHTML = r;
+
+        // var txt = "snow ";
+        // txt += "white"
+        // document.getElementById("demo").innerHTML = txt;
+
+
+
+        var x = 5;
+        var u = 9;
+        // var y = " string it's good not so good";
+        var y = `it will "not" take `;
+        var n1 = 54e4;
+        var n2 = 626e-4;
+        // var z = x + y;
+        // var z = x + u + y;
+        const t = 5000;
+        const v = "5000";
+        // document.getElementById("demo").innerHTML = y;
+        // document.getElementById("demo").innerHTML = n2;
+        document.getElementById("demo").innerHTML = (t === v);
+
+
+        // let a = 100;
+        // let b = 50;
+        // // let b = a--
+        // // a++
+        // a *= b
+        // document.getElementById("demo").innerHTML = a;
+
+        //operator precedence
+
+        //  it is in an order of (/, *, + , -)
+        // var x = 10 + 50 * 3 / 3 - 20;
+        // var x = (10 + 2) / 4
+        // document.getElementById("demo").innerHTML = x;
+
+
+
+    </script>
+</body>
+</html>
