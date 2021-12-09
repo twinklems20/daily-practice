@@ -6,13 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body onload="alert('loading is finished')">
 
     <h3 id="demo"></h3>
     <p id="para"></p>
     <p id="demo2">hello</p>
     <button onclick="document.getElementById('demo').innerHTML= 'PARA CHANGED'">print</button>
 
+    <h2 id="func">Functions</h2>
+
+    <div class="container" style="text-align: center;">
+    <h1 id="evnt" onmouseover="this.style.fontSize = '80px'" onmouseout="this.style.fontSize = '30px'">Mouse over</h1>
+    </div>
+
+    <button onclick="tDate()">Today is....</button>
+    <p id="dt"></p>
+
+    <h2 >ON LOAD</h2>
 
     <script>
 
@@ -112,16 +122,67 @@
         // document.getElementById("demo").innerHTML = movie instanceof Array;
 
 
+         
+
+
+        // 9th december FUNCTIONS, OBJECTS, EVENTS
+
+        let j = calculate(9, 10);
+        document.getElementById("func").innerHTML = j;
+
+        function calculate (a, b) {
+            return a*b ;
+        }
+
+        // function calculate () {
+        //     // return (1000 / 100);
+
+        //     let str = " remainder now ";
+        //     // document.getElementById("func").innerHTML = (1000 % 999) + str ;
+        // }
+
+        
+        // AGE COUNTER
+       
+        // function currentAge (bornYear) {
+        //     return 2021 - bornYear ;
+        // }
+        // document.getElementById("func").innerHTML = "your current age is " + currentAge(2000)  ;
+
+        // myFunc();
+        // function myFunc () {
+        //     let str = "helloooo";
+        //     document.getElementById("func").innerHTML = str + " kiraz"
+        // }
+        
+
+        const girl = {name: "kiraz", fname: "serkan", mname: "Eda"}
+        // document.getElementById("func").innerHTML = "She is " + girl.name + "<br>" +  girl.mname + " is her mother";
+
         const dtls = {
             city: "mumbai",
             code: 66858,
             rating: 8,
-            fms: "fcity"
+            fms: "fcity",
+            view: function () {
+                return this.city + " is also known as " + this.fms ; 
+            }
         }
 
-        // document.getElementById("demo").innerHTML = dtls.city  + " is the best with ratings of " + dtls.rating;
-        // document.getElementById("demo").innerHTML = typeof(dtls) + "<br>" + typeof(dtls.city) + "<br>" + typeof(dtls.code) 
+        // document.getElementById("func").innerHTML = dtls.view() ;
 
+        // document.getElementById("demo").innerHTML = dtls.city  + " is the best with ratings of " + dtls.rating;
+        // document.getElementById("demo").innerHTML = typeof(dtls) + "<br>" + typeof(dtls.city) + "<br>" + typeof(dtls.code);
+
+        // let d = new String("mashaaaa");
+        // let d = new Number(95985);
+        let d = new Boolean(x == y);
+        // document.getElementById("func").innerHTML = typeof(d);
+
+        function tDate() {
+            document.getElementById('dt').innerHTML = Date();
+            document.getElementById('dt').style.fontSize = '40px';
+        }
 
 
     </script>
