@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body onload="alert('loading is finished')">
+<body>
+<!-- <body onload="alert('loading is finished')"> -->
 
     <h3 id="demo"></h3>
     <p id="para"></p>
@@ -16,13 +17,18 @@
     <h2 id="func">Functions</h2>
 
     <div class="container" style="text-align: center;">
-    <h1 id="evnt" onmouseover="this.style.fontSize = '80px'" onmouseout="this.style.fontSize = '30px'">Mouse over</h1>
+    <!-- <h1 id="evnt" onmouseover="this.style.fontSize = '80px'" onmouseout="this.style.fontSize = '30px'">Mouse over</h1> -->
     </div>
 
     <button onclick="tDate()">Today is....</button>
     <p id="dt"></p>
 
     <h2 >ON LOAD</h2>
+
+    <h2 >METHODS</h2>
+    <pre id="method2"></pre>
+    <p id="method"></P>
+    
 
     <script>
 
@@ -184,6 +190,166 @@
             document.getElementById('dt').style.fontSize = '40px';
         }
 
+
+         // 10th december STRING, NUMBERS AND ARRAY METHODS
+
+         let m2 = "Hellooo Guys......"
+         let m1 = "ishita Krina ISHITA ishita"
+         let m3 = "             EVE       "
+         document.getElementById("method").innerHTML = m1.length;
+         document.getElementById("method").innerHTML = m1.slice(0, 4);
+         document.getElementById("method").innerHTML = m1.slice(3);
+         document.getElementById("method").innerHTML = m1.slice(-4, -1);
+         document.getElementById("method").innerHTML = m1.slice(-3);
+
+         document.getElementById("method").innerHTML = m1.substring(2, 9)
+         document.getElementById("method").innerHTML = m1.substring(5)
+
+         document.getElementById("method").innerHTML = m1.substr(2, 9)
+         document.getElementById("method").innerHTML = m1.substr(6)
+         document.getElementById("method").innerHTML = m1.substr(-5)
+
+         document.getElementById("method").innerHTML = m1.replace("ishita", "twinkle")
+         document.getElementById("method").innerHTML = m1.replace(/ISHITA/i, "krina")
+         document.getElementById("method").innerHTML = m1.replace(/ISHITA/g, "HIMANI")
+
+         document.getElementById("method").innerHTML = m1.toUpperCase()
+         document.getElementById("method").innerHTML = m1.toLowerCase()
+
+         document.getElementById("method").innerHTML = m2.concat(" ", m1, " ", m2)
+
+         document.getElementById("method2").innerHTML = m3 // CHANGES IN CONSOLE WE HAVE TO USE <pre> TAG
+        document.getElementById("method2").innerHTML = m3.trim()   
+
+        //  document.getElementById("method").innerHTML = m1.padStart(30, 0)
+        //  document.getElementById("method").innerHTML = m1.padEnd(30, "....")
+
+        //  document.getElementById("method").innerHTML = m1.charAt(20)
+        //  document.getElementById("method").innerHTML = m1.charCodeAt(25)
+        //  document.getElementById("method").innerHTML = m1[0]
+
+        //  m1[0] = "ZZZZZZ"
+        //  document.getElementById("method").innerHTML = m1 // GIVES NO ERRORS BUT NOT WORK
+
+        //  m4 = "A B C D E F G"
+        //  const myArr = m5.split(" ")
+        // //  document.getElementById("method").innerHTML = myArr[3]
+         
+        // let m4 = ""
+        // for(i=0; i<=m4.length; i++) {
+        //     m5 += m5[i] + "<br>" ;
+        // }
+        // document.getElementById("method").innerHTML = m4
+
+        let text = "H e l l o";
+        const myArr = text.split("");
+
+        text = "";
+        for (let i = 0; i < myArr.length; i++) {
+            text += myArr[i] + "<br>"
+        }
+        document.getElementById("method").innerHTML = text;
+
+        let p1 = 15 / "sghs"
+        document.getElementById("method").innerHTML = p1
+        document.getElementById("method").innerHTML = isNaN(p1)
+        document.getElementById("method").innerHTML = typeof(NaN)
+
+        document.getElementById("method").innerHTML = -2 / 0;
+         
+        let num = 4;
+        let nums = ""
+        while(num != Infinity) {
+            num = num * num;
+            nums = nums + num + "<br>";
+        }
+        document.getElementById("method").innerHTML = nums;
+
+        document.getElementById("method").innerHTML = typeof(Infinity)
+
+        document.getElementById("method").innerHTML = (2000).toString()
+        document.getElementById("method").innerHTML = (1.2656).toExponential(2)
+        document.getElementById("method").innerHTML = (2.2195).toFixed(2)
+        document.getElementById("method").innerHTML = (2.2195).toPrecision(2)
+        document.getElementById("method").innerHTML = (2.2195).valueOf()
+        
+        document.getElementById("method").innerHTML = Number(true)
+        document.getElementById("method").innerHTML = Number(false)
+        document.getElementById("method").innerHTML = Number(-41)
+        document.getElementById("method").innerHTML = Number(2.23)
+        document.getElementById("method").innerHTML = Number("holiday")
+
+        document.getElementById("method").innerHTML = Number(new Date("2000-12-02"))
+
+        document.getElementById("method").innerHTML = parseInt("5455")
+        document.getElementById("method").innerHTML = parseInt("-5145")
+        document.getElementById("method").innerHTML = parseInt("54.55")
+        document.getElementById("method").innerHTML = parseInt("-5.455")
+        document.getElementById("method").innerHTML = parseInt("54 55 45")
+        document.getElementById("method").innerHTML = parseInt("5 years")
+        document.getElementById("method").innerHTML = parseInt("years 5")
+
+        document.getElementById("method").innerHTML = parseFloat("45")
+        document.getElementById("method").innerHTML = parseFloat("4.005")
+        document.getElementById("method").innerHTML = parseFloat("-45")
+        document.getElementById("method").innerHTML = parseFloat("-4.115")
+        document.getElementById("method").innerHTML = parseFloat("15 freez")
+        document.getElementById("method").innerHTML = parseFloat("hhghyh 45")
+        document.getElementById("method").innerHTML = parseFloat("20 8 9")
+
+        document.getElementById("method").innerHTML = Number.MAX_VALUE;
+        document.getElementById("method").innerHTML = Number.MIN_VALUE;
+
+        document.getElementById("method").innerHTML = Number.POSITIVE_INFINITY
+        document.getElementById("method").innerHTML = Number.NEGATIVE_INFINITY
+
+        document.getElementById("method").innerHTML = Number.NaN
+
+        const flower = ["rose", "lily", "lotus"]
+        // const flower = new Array ("rose", "lily", "lotus")
+        document.getElementById("method").innerHTML = flower.length
+        document.getElementById("method").innerHTML = flower[0]
+        document.getElementById("method").innerHTML = flower[flower.length - 1]
+
+        let lst = "<ol>"
+            for(let i=0; i<=flower.length; i++) {
+                lst += "<li>" + flower[i] + "</li>"
+            }
+            lst += "</ol>"
+
+            document.getElementById("method").innerHTML = lst    
+
+            flower.push("sunflower")
+            flower.pop()
+            document.getElementById("method").innerHTML = flower 
+            flower[flower.length] = "sunflower"  
+            document.getElementById("method").innerHTML = flower
+            document.getElementById("method").innerHTML = Array.isArray(flower)
+            document.getElementById("method").innerHTML = flower instanceof(Array)
+
+            document.getElementById("method").innerHTML = flower.toString()
+            document.getElementById("method").innerHTML = flower.join(" | ")
+
+            document.getElementById("method").innerHTML = flower.shift()
+            flower.unshift("lysus")
+            document.getElementById("method").innerHTML = flower
+
+            delete flower[1]
+            document.getElementById("method").innerHTML = flower
+
+            flower.splice(3, 0, "KIRAZ", "EDA", "HAYAT")
+            flower.splice(3, 3, "KIRAZ")
+            flower.splice(0, 2)
+            document.getElementById("method").innerHTML = flower
+
+            const friends = ["khushi", "riya","KIRAZ", "EDA", "HAYAT"]
+            const series = ["marvels", "disney"]
+            document.getElementById("method").innerHTML = flower.concat(friends, series)
+            document.getElementById("method").innerHTML = flower.concat("...........chritsmas")
+
+            // const newfriends = friends.slice(1)
+            const newfriends = friends.slice(1, 3)
+            document.getElementById("method").innerHTML = newfriends
 
     </script>
 </body>
