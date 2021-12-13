@@ -28,7 +28,13 @@
     <h2 >METHODS</h2>
     <pre id="method2"></pre>
     <p id="method"></P>
-    
+
+    <h2 style="color: blue;">DATE, MATH, BOOLEAN, COMPARISION</h2>    
+    <p id="dt1"></p>
+
+    <input type="number" id="cDr">
+    <button onclick="myDrive()">Check if you r eligible for Drive</button>
+    <p id="dt2"></p>
 
     <script>
 
@@ -350,6 +356,115 @@
             // const newfriends = friends.slice(1)
             const newfriends = friends.slice(1, 3)
             document.getElementById("method").innerHTML = newfriends
+
+
+
+            // 13th december DATE, SET DATE, GET DATE, MATH, BOOLOEAN, COMPARISION
+
+            const d1 = new Date();
+            // const d1 = new Date(2000, 1, 20, 11, 40, 15)
+            // const d1 = new Date(2000, 1, 20);
+            // const d1 = new Date("February 20, 2021 12:24:50")
+            // const d1 = new Date(86400000);;
+            // document.getElementById("dt1").innerHTML = d1.toString();
+            document.getElementById("dt1").innerHTML = d1.toUTCString();
+            document.getElementById("dt1").innerHTML = d1.toDateString()
+            document.getElementById("dt1").innerHTML = d1.toISOString()
+            document.getElementById("dt1").innerHTML = d1.getTime()
+            document.getElementById("dt1").innerHTML = d1.getFullYear()
+            document.getElementById("dt1").innerHTML = d1.getMonth()
+            document.getElementById("dt1").innerHTML = d1.getDay()
+            document.getElementById("dt1").innerHTML = d1.getHours()
+            document.getElementById("dt1").innerHTML = d1.getMinutes()
+            document.getElementById("dt1").innerHTML = d1.getSeconds()
+            document.getElementById("dt1").innerHTML = d1.getDate()
+
+            const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+            const d2 = new Date();
+            let month = months[d2.getMonth()];
+            document.getElementById("dt1").innerHTML = month;
+
+            const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+            const d3 = new Date()
+            let day = days[d3.getDay()]
+            document.getElementById("dt1").innerHTML = day;
+
+            const d4 = new Date()
+            // d4.setFullYear(2022);
+            // d4.setMonth(1)
+            // d4.setDate(25)
+            // d4.setHours(22)
+            // d4.setMinutes(30)
+            d4.setDate(d4.getDate() + 50)
+            document.getElementById("dt1").innerHTML = d4
+
+            let textt ;
+            const today = new Date()
+            const someday = new Date()
+            someday.setFullYear(2023, 10, 8)
+
+            if (someday > today){
+                textt = "Today is before 8th november 2023"
+            }
+            else {
+                textt = "Today is after 8th november 2023"
+            }
+
+            document.getElementById("dt1").innerHTML = textt;
+
+
+            document.getElementById("dt1").innerHTML = Math.PI
+            document.getElementById("dt1").innerHTML = Math.E
+            document.getElementById("dt1").innerHTML = Math.SQRT2
+            document.getElementById("dt1").innerHTML = Math.SQRT1_2
+            document.getElementById("dt1").innerHTML = Math.LN2
+            document.getElementById("dt1").innerHTML = Math.LN10
+            document.getElementById("dt1").innerHTML = Math.LOG10E
+            document.getElementById("dt1").innerHTML = Math.LOG2E
+
+            document.getElementById("dt1").innerHTML = Math.round(2.5)
+            document.getElementById("dt1").innerHTML = Math.ceil(3.1)
+            document.getElementById("dt1").innerHTML = Math.floor(-5.7)
+            document.getElementById("dt1").innerHTML = Math.trunc(-5.545)
+            document.getElementById("dt1").innerHTML = Math.sign(-85)
+            document.getElementById("dt1").innerHTML = Math.sign(0)
+            document.getElementById("dt1").innerHTML = Math.sign(45)
+            document.getElementById("dt1").innerHTML = Math.pow(2, 10)
+            document.getElementById("dt1").innerHTML = Math.sqrt(25)
+            document.getElementById("dt1").innerHTML = Math.abs(-9.23)
+            document.getElementById("dt1").innerHTML = Math.sin(270 * Math.PI / 180)
+            document.getElementById("dt1").innerHTML = Math.cos(180 * Math.PI / 180)
+
+            document.getElementById("dt1").innerHTML = Math.min(15, 0, 254, -2, 156, -3)
+            document.getElementById("dt1").innerHTML = Math.max(15, 0, 254, -2, 156, -3)
+
+            document.getElementById("dt1").innerHTML = Math.random(25, 65)
+
+            document.getElementById("dt1").innerHTML = Math.log(2)
+            document.getElementById("dt1").innerHTML = Math.log2(2)
+            document.getElementById("dt1").innerHTML = Math.log10(2)
+
+            document.getElementById("dt1").innerHTML = 25 > 20
+            document.getElementById("dt1").innerHTML = Boolean(false)
+            let x45;
+            document.getElementById("dt1").innerHTML = Boolean(x45)
+            document.getElementById("dt1").innerHTML = Boolean(null)
+            document.getElementById("dt1").innerHTML = Boolean(100/"hh")
+
+            function myDrive() {
+            let cDrive ;
+            let cDr = Number(document.getElementById("cDr").value);
+            if(isNaN(cDr)){
+                cDrive = "IT IS NOT VALID INPUT"
+            }
+            else {
+              cDrive =  (cDr > 18) ? " DRIVE" : " NOT DRIVE";
+            }
+            document.getElementById("dt2").innerHTML = "YOU CAN" + cDrive;
+
+
+        }
 
     </script>
 </body>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .tab, .tab2 {
+            margin-top: 50px;
+            display: flex;
+        }
+        .tab th {
+            padding: 10px;
+        }
+        .tab2 th {
+            padding-bottom: 140px;
+        }
+        table {
+            margin-left: 50px;
+            border: 1px solid black;
+        }
+         .td1 {
+            border: 1px solid skyblue;
+            background-color: powderblue;
+            padding: 5px;
+            padding-left: 10px !important;
+            padding-right: 10px;
+            cursor: move;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="number" name="number" id="number" >
+        <button onclick="create_table()">Submit</button>
+    </div>
+
+    <div class="tab">
+        <table><th>PLAYERS</th>
+            <tr><td class="td1" draggable="true" ondragstart="dragStart(event)">Player1</td></tr>
+            <tr><td class="td1" draggable="true">Player1</td></tr>
+            <tr><td class="td1" draggable="true">Player1</td></tr>
+            <tr><td class="td1" draggable="true">Player1</td></tr>
+            <tr><td class="td1" draggable="true">Player1</td></tr>
+            <tr><td class="td1" draggable="true">Player1</td></tr>
+        </table> 
+    <div class="tab2">
+        <table>
+            <th>TEAM 1</th>
+            <tr><td class="td2" draggable="true" ondragover="allowDrop(event)" ondrop="dragDrop(event)"></td></tr>
+            <tr><td class="td2" draggable="true"></td></tr>
+        </table>
+
+        <table>
+            <th>TEAM 1</th>
+            <tr><td class="td2" draggable="true"></td></tr>
+            <tr><td class="td2" draggable="true"></td></tr>
+        </table>
+
+        <table>
+            <th>TEAM 3</th>
+            <tr><td class="td2" draggable="true"></td></tr>
+            <tr><td class="td2" draggable="true"></td></tr>
+        </table>
+    </div>
+    </div>
+
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+    
+        function dragStart(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+    
+        function dragDrop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+
+</body>
+</html>
