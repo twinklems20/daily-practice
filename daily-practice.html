@@ -36,6 +36,9 @@
     <button onclick="myDrive()">Check if you r eligible for Drive</button>
     <p id="dt2"></p>
 
+    <h2>CONDITIONS, SWITCH, FOR LOOP</h2>    
+    <p id="loop11">CHANGED</p>
+
     <script>
 
         // 7th december intro, statements, syntax, variable
@@ -462,6 +465,15 @@
               cDrive =  (cDr > 18) ? " DRIVE" : " NOT DRIVE";
             }
             document.getElementById("dt2").innerHTML = "YOU CAN" + cDrive;
+
+
+             // 13th december CONDITIONS, SWITCH, FOR LOOP
+
+            //  let t2 = prompt("Enter the time in hour")
+            let t3 = new Date()
+            if (t3.getHours() < 18) {
+                document.getElementById("loop11").innerHTML = "Good day!";
+                }
 
 
         }

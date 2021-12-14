@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;">
+    
+    <h2 style="color: rgb(48, 48, 236);">CONDITIONS, LOOPS</h2>
+
+        <input type="number" id="age" >
+        <button onclick="myFunc()">ENTER AGE</button>
+   
+
+    <h1 id="con" style="text-align: center;"></h1>
+    <script>
+        {
+            // 14th december CONDITIONS, SWITCH, FOR LOOP
+
+            // let t3 = prompt("Enter the time in hour")
+            // if (t3 < 11) {
+            //     document.getElementById("con").innerHTML = "GOOOOD MORNING !";
+            //     }
+            // else if(t3 < 16) {
+            //     document.getElementById("con").innerHTML = "GOOD AFTERNOOOOOON !";
+            // } 
+            // else {
+            //     document.getElementById("con").innerHTML = "GOOD EVENING";
+            // } 
+            
+            function myFunc() {
+                let text;
+                let AGE = document.getElementById("age").value;
+                switch ( AGE>=0 ){
+                    case (AGE < 5):
+                        text = "You are kid";
+                        break;
+                    case (AGE < 12):
+                        text = "You are a child";
+                        break;
+                    case (AGE < 18):
+                        text = "You are a TEENAGER";
+                        break;
+                    case (AGE > 18 && AGE < 30):
+                        text = "You are an ADULT Now !";
+                        break;   
+                    default :
+                        text = "You are old";
+                        break;
+                }
+                document.getElementById("con").innerHTML = text;
+
+            }
+
+
+            const days = ["Group", "Teddy", "Chocolate", "Rose", "Kick", "Slap"]
+            let txt = "" ;
+
+            // for (let i=0; i < days.length; i++)
+            // {
+            //     txt += days[i] + "<br>";
+            // }
+
+            // for (let i in days){
+            //     txt += days[i] + "<br>"
+            // }
+
+            // days.forEach(myFunction)
+            // function myFunction(value, index, array){
+            //     txt += value + "   ";
+            // }
+
+            days.forEach(myFunction)
+            function myFunction(value){
+                txt += value + "<br>";
+            }
+
+            document.getElementById("con").innerHTML = txt;
+
+        }
+    </script>
+</body>
+</html>

@@ -17,9 +17,9 @@
         .tab th {
             padding: 10px;
         }
-        .tab2 th {
+        /* .tab2 th {
             padding-bottom: 140px;
-        }
+        } */
         table {
             margin-left: 50px;
             border: 1px solid black;
@@ -30,7 +30,16 @@
             padding: 5px;
             padding-left: 10px !important;
             padding-right: 10px;
-            cursor: move;
+            cursor: pointer;
+        }
+        .td2 {
+            padding: 5px;
+            padding-left: 10px !important;
+            padding-right: 10px;
+        }
+
+        .hide {
+            display: none;
         }
     </style>
 </head>
@@ -42,48 +51,82 @@
 
     <div class="tab">
         <table><th>PLAYERS</th>
-            <tr><td class="td1" draggable="true" ondragstart="dragStart(event)">Player1</td></tr>
             <tr><td class="td1" draggable="true">Player1</td></tr>
-            <tr><td class="td1" draggable="true">Player1</td></tr>
-            <tr><td class="td1" draggable="true">Player1</td></tr>
-            <tr><td class="td1" draggable="true">Player1</td></tr>
-            <tr><td class="td1" draggable="true">Player1</td></tr>
+            <tr><td class="td1" draggable="true">Player2</td></tr>
+            <tr><td class="td1" draggable="true">Player3</td></tr>
+            <tr><td class="td1" draggable="true">Player4</td></tr>
+            <tr><td class="td1" draggable="true">Player5</td></tr>
+            <tr><td class="td1" draggable="true">Player6</td></tr>
         </table> 
     <div class="tab2">
         <table>
             <th>TEAM 1</th>
-            <tr><td class="td2" draggable="true" ondragover="allowDrop(event)" ondrop="dragDrop(event)"></td></tr>
-            <tr><td class="td2" draggable="true"></td></tr>
+            <tr><td class="td2"></td></tr>
+            <tr><td class="td2"></td></tr>
         </table>
 
         <table>
             <th>TEAM 1</th>
-            <tr><td class="td2" draggable="true"></td></tr>
-            <tr><td class="td2" draggable="true"></td></tr>
+            <tr><td class="td2"></td></tr>
+            <tr><td class="td2"></td></tr>
         </table>
 
         <table>
             <th>TEAM 3</th>
-            <tr><td class="td2" draggable="true"></td></tr>
-            <tr><td class="td2" draggable="true"></td></tr>
+            <tr><td class="td2"></td></tr>
+            <tr><td class="td2"></td></tr>
         </table>
     </div>
     </div>
 
     <script>
-        function allowDrop(ev) {
-            ev.preventDefault();
-        }
+        // function allowDrop(ev) {
+        //     ev.preventDefault();
+        // }
     
-        function dragStart(ev) {
-            ev.dataTransfer.setData("text", ev.target.id);
-        }
+        // function dragStart(ev) {
+        //     ev.dataTransfer.setData("text", ev.target.id);
+        // }
     
-        function dragDrop(ev) {
-            ev.preventDefault();
-            var data = ev.dataTransfer.getData("text");
-            ev.target.appendChild(document.getElementById(data));
+        // function dragDrop(ev) {
+        //     ev.preventDefault();
+        //     var data = ev.dataTransfer.getData("text");
+        //     ev.target.appendChild(document.getElementById(data));
+        // }
+
+
+        console.log("drag n drop");
+
+        const plyer = document.querySelector(".td1");
+        const teams = document.getElementsByClassName("td2");
+
+        plyer.addEventListener('dragstart', (e) => {
+            setInterval(() => {
+                e.target.className = 'hide';
+            }, 0);
+        })
+
+        plyer.addEventListener ('dragend', (e) => {
+            e.target.className = 'td1';
+        })
+
+        for (td2 of teams) {
+
+            td2.addEventListener('dragover', (e) => {
+                e.preventDefault();
+            })
+            td2.addEventListener('dragenter', () => {
+                
+            })
+            td2.addEventListener('dragleave', (e) => {
+                e.target.className = 'td1';
+            })
+            td2.addEventListener('drop', (e) => {
+            //    e.target.append(plyer)
+            })
+
         }
+
     </script>
 
 </body>
