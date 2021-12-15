@@ -28,13 +28,13 @@
             border: 1px solid skyblue;
             background-color: powderblue;
             padding: 5px;
-            padding-left: 10px !important;
+            padding-left: 10px ;
             padding-right: 10px;
             cursor: pointer;
         }
         .td2 {
             padding: 5px;
-            padding-left: 10px !important;
+            padding-left: 10px ;
             padding-right: 10px;
         }
 
@@ -61,20 +61,20 @@
     <div class="tab2">
         <table>
             <th>TEAM 1</th>
-            <tr><td class="td2"></td></tr>
-            <tr><td class="td2"></td></tr>
+            <tr class="td2"><td></td></tr>
+            <tr class="td2"><td></td></tr>
         </table>
 
         <table>
             <th>TEAM 1</th>
-            <tr><td class="td2"></td></tr>
-            <tr><td class="td2"></td></tr>
+            <tr class="td2"><td></td></tr>
+            <tr class="td2"><td></td></tr>
         </table>
 
         <table>
             <th>TEAM 3</th>
-            <tr><td class="td2"></td></tr>
-            <tr><td class="td2"></td></tr>
+            <tr class="td2"><td></td></tr>
+            <tr class="td2"><td></td></tr>
         </table>
     </div>
     </div>
@@ -95,14 +95,22 @@
         // }
 
 
+        function create_table() {
+            if (document.getElementById("number").value < 1) {
+                document.getElementsByClassName("tab").style.display="none";
+            }
+            
+        }
+
         console.log("drag n drop");
 
-        const plyer = document.querySelector(".td1");
-        const teams = document.getElementsByClassName("td2");
+        var plyer = document.querySelector(".td1");
+        var teams = document.getElementsByClassName("td2");
 
         plyer.addEventListener('dragstart', (e) => {
             setInterval(() => {
-                e.target.className = 'hide';
+                // e.target.className = 'hide';
+                e.target.style.display = "none";
             }, 0);
         })
 
@@ -112,9 +120,9 @@
 
         for (td2 of teams) {
 
-            td2.addEventListener('dragover', (e) => {
-                e.preventDefault();
-            })
+            // td2.addEventListener('dragover', (e) => {
+            //     // e.preventDefault();
+            // })
             td2.addEventListener('dragenter', () => {
                 
             })
@@ -122,7 +130,7 @@
                 e.target.className = 'td1';
             })
             td2.addEventListener('drop', (e) => {
-            //    e.target.append(plyer)
+               e.target.append(plyer)
             })
 
         }

@@ -33,7 +33,7 @@
             function myFunc() {
                 let text;
                 let AGE = document.getElementById("age").value;
-                switch ( AGE>=0 ){
+                switch ( AGE >= 0 ){
                     case (AGE < 5):
                         text = "You are kid";
                         break;
@@ -55,6 +55,8 @@
             }
 
 
+             // 15th december FOR IN, FOR OF , WHILE, DO WHILE LOOP
+
             const days = ["Group", "Teddy", "Chocolate", "Rose", "Kick", "Slap"]
             let txt = "" ;
 
@@ -67,17 +69,121 @@
             //     txt += days[i] + "<br>"
             // }
 
+            // const girl = {name: "Kiraz", fname: "Serkan", mname: "Eda"}
+            // for (let i in girl){
+            //     txt += girl[i] + "<br>"
+            // }
+
             // days.forEach(myFunction)
             // function myFunction(value, index, array){
             //     txt += value + "   ";
             // }
 
-            days.forEach(myFunction)
-            function myFunction(value){
-                txt += value + "<br>";
+            // days.forEach(myFunction)
+            // function myFunction(value){
+            //     txt += value + "<br>";
+            // }
+
+            // let num = [14, 24, 34, 44, 54, 64, 74]
+            // for (let i of num) {
+            //     txt += i + "<br>"
+            // }
+
+            // let me = "TWINKLE"
+            // for (let i of me) {
+            //     txt += i + "<br>"
+            // }
+
+            let i = 0;
+            
+            // for (;i < 10;) {
+            //     txt += (2000 + i) + " year" + "<br>";
+            //     i++
+            // }
+
+            // while(i < 10) {
+            //     txt += (2000 + i) + " year" + "<br>";
+            //     i++
+            // }
+
+            // do {
+            //     txt += (2000 + i) + " year " + "<br>";
+            //     i++
+            // }
+            // while (i > 10)
+
+            // for (let i=0; i < 10; i++)
+            // {
+            //     if (i == 4) { break }
+            //     txt += i + "<br>";
+            // }
+
+            // for (let i=0; i < 10; i++)
+            // {
+            //     if (i == 4) { continue }  // 4 IS SKIPPED
+            //     txt += i + "<br>";
+            // }
+
+            for (let i = 50; i > 4; i = i - 5)
+            {
+                txt += i + "<br>";
             }
 
+            // let num = [14, 24, 34, 44, 54, 64, 74]
+            
+            //     list: {
+            //         txt += num[0] + "<br>"
+            //         txt += num[1] + "<br>"
+            //         txt += num[2] + "<br>"
+            //         txt += num[3] + "<br>"
+            //         break list;
+            //         txt += num[5] + "<br>"
+            //     }
+
             document.getElementById("con").innerHTML = txt;
+
+
+            const movie = new Set(["war", "hero", "kkkg", "ddlj"])
+
+            movie.forEach(function(value) {
+                txt += value + "<br>"
+            })
+
+            // document.getElementById("con").innerHTML = movie.size ;
+            document.getElementById("con").innerHTML = txt;
+
+
+            const place = new Set()
+
+            // place.add("jammu")
+            // place.add("maldivs")
+            // place.add("lonavala")
+            // place.add("hiburg")
+            // place.add("marine")
+            
+            const a1 = "jammu"
+            const a2 = "maldivs"
+            const a3 = "lonavala"
+            const a4 = "hiburg"
+            const a5 = "marine"
+            const a6 = "jammu"
+
+            place.add(a1)
+            place.add(a2)
+            place.add(a3)
+            place.add(a4)
+            place.add(a5)
+            place.add(a4)
+            place.add(a5)
+
+            document.getElementById("con").innerHTML = place.size
+            document.getElementById("con").innerHTML = place.values()
+
+            for (const x of place.values()) {
+                txt += x + "<br>" ;
+            }
+            document.getElementById("con").innerHTML = txt;
+
 
         }
     </script>
