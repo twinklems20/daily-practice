@@ -129,6 +129,8 @@
                 txt += i + "<br>";
             }
 
+            // 16th december BREAK, ITERABLES, SET, MAP
+
             // let num = [14, 24, 34, 44, 54, 64, 74]
             
             //     list: {
@@ -145,7 +147,7 @@
 
             const movie = new Set(["war", "hero", "kkkg", "ddlj"])
 
-            movie.forEach(function(value) {
+            movie.forEach(function(value) {  // THIS FOREACH IS DIFFERENT FROM THE FOREACH USED IN FOR...IN LOOP
                 txt += value + "<br>"
             })
 
@@ -182,8 +184,92 @@
             for (const x of place.values()) {
                 txt += x + "<br>" ;
             }
-            document.getElementById("con").innerHTML = txt;
+            // document.getElementById("con").innerHTML = txt;
+            document.getElementById("con").innerHTML = place.has("jammu")
+            document.getElementById("con").innerHTML = place.delete("jammu")
+            document.getElementById("con").innerHTML = place.has("jammu")
 
+            // MAP 
+
+            const fruits = new Map([
+                ["mango", 500],
+                ["orange", 400],
+                ["chickoo", 100],
+                ["strawberry", 200]
+            ])
+            document.getElementById("con").innerHTML = fruits.get("chickoo")
+
+            const colors = new Map()
+
+            colors.set("blue", 2)
+            colors.set("black", 3)
+            colors.set("white", 1)
+
+            colors.forEach (function(key, value) {
+                txt += value + "<br>" + " " + key
+            })
+
+
+            document.getElementById("con").innerHTML = colors.get("black")
+            document.getElementById("con").innerHTML = colors.size
+
+            document.getElementById("con").innerHTML = txt
+            
+           
+            for (let x of colors.entries()) {
+                txt += x + "<br>"
+            }
+            document.getElementById("con").innerHTML = txt
+            
+            for (let x of colors) {
+                txt += x + "<br>"
+            }
+            document.getElementById("con").innerHTML = txt
+
+            document.getElementById("con").innerHTML = "john".constructor
+            document.getElementById("con").innerHTML = (1515).constructor
+            document.getElementById("con").innerHTML = false.constructor
+            document.getElementById("con").innerHTML = ([15, 6, 12]).constructor
+            document.getElementById("con").innerHTML = ({name: "kiraz", like: 151}).constructor
+            document.getElementById("con").innerHTML = new Date().constructor
+            document.getElementById("con").innerHTML = function() {}.constructor
+
+            const ms = [1, 2, 3, 4]
+            document.getElementById("con").innerHTML = isArray(ms)
+
+            function isArray(myArray) {
+                return myArray.constructor === Array
+            }
+
+            let d = new Date()
+            document.getElementById("con").innerHTML = isDate(d)
+
+            function isDate(myDate) {
+                return myDate.constructor === Date
+            }
+
+            // d = undefined
+
+            document.getElementById("con").innerHTML = typeof(d)
+
+            document.getElementById("con").innerHTML = Number("125")
+            document.getElementById("con").innerHTML = Number(" ")
+            document.getElementById("con").innerHTML = Number(d)
+            document.getElementById("con").innerHTML = Number(" ")
+
+            let x1 = "5"
+            let y1 =+ x1
+            document.getElementById("con").innerHTML = typeof(y1)
+
+            let x2 = "serkan"
+            let y2 =+ x1
+            document.getElementById("con").innerHTML = typeof(y2)
+
+            let x3 = 2000
+            document.getElementById("con").innerHTML = typeof(String(2000))
+
+            // document.getElementById("con").innerHTML = String(d)
+            document.getElementById("con").innerHTML = d.toString()
 
         }
     </script>
