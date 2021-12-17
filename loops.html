@@ -12,7 +12,7 @@
 
         <input type="number" id="age" >
         <button onclick="myFunc()">ENTER AGE</button>
-   
+        <p id="errmsg"></p>
 
     <h1 id="con" style="text-align: center;"></h1>
     <script>
@@ -31,8 +31,22 @@
             // } 
             
             function myFunc() {
+            
                 let text;
                 let AGE = document.getElementById("age").value;
+
+                let x = document.getElementById("age").value;
+                const msg = document.getElementById("errmsg")
+                
+                try {
+                    if (x == "") throw "please enter the value";
+                } catch (error) {
+                    msg.innerHTML = "Ooppss.... " + error;
+                }
+                finally {
+
+                }
+
                 switch ( AGE >= 0 ){
                     case (AGE < 5):
                         text = "You are kid";
@@ -43,11 +57,14 @@
                     case (AGE < 18):
                         text = "You are a TEENAGER";
                         break;
-                    case (AGE > 18 && AGE < 30):
+                    case (AGE > 17 && AGE < 30):
                         text = "You are an ADULT Now !";
-                        break;   
+                        break; 
+                    case (AGE > 30 && AGE < 110):
+                        text = "You are mature enough";
+                            break;      
                     default :
-                        text = "You are old";
+                        text = "Then you are an ALIEN 👽";
                         break;
                 }
                 document.getElementById("con").innerHTML = text;
@@ -226,6 +243,8 @@
             }
             document.getElementById("con").innerHTML = txt
 
+            // 17th december TypeOf, Type Conversion, RegEx basics, Error handling, SCOPE
+
             document.getElementById("con").innerHTML = "john".constructor
             document.getElementById("con").innerHTML = (1515).constructor
             document.getElementById("con").innerHTML = false.constructor
@@ -270,6 +289,40 @@
 
             // document.getElementById("con").innerHTML = String(d)
             document.getElementById("con").innerHTML = d.toString()
+
+            let texxt = "visit the Imagica and you know Imagica is so cool and charges are 800 per person"
+            document.getElementById("con").innerHTML = texxt.search(/imagica/i)
+
+            document.getElementById("con").innerHTML = texxt.replace(/Imagica/g, "Fan park")
+
+            // let result = texxt.match(/[o]/g);
+            // let result1 = texxt.match(/[8]/g);
+            // let result1 = texxt.match(/\d/g);
+            // let result1 = texxt.match(/\s/g);
+            // let result1 = texxt.search(/\bIma/);
+            let result1 = texxt.search(/gica\b/);
+            document.getElementById("con").innerHTML = result1;
+
+            const pattern = /you/
+            document.getElementById("con").innerHTML = pattern.test("how are you, also you are so sweet")
+            document.getElementById("con").innerHTML = /aree/.test("how are you, also you are so sweet")
+
+            document.getElementById("con").innerHTML = /you/g.exec("how are you, also you are so sweet")
+
+            let n = 20;
+            try {
+                // n.toPrecision(2511)
+                // n = m + 1;
+                // eval("alert('Hello)");
+                // n.toUppercase()
+                decodeURI("%")
+            } catch (error) {
+                document.getElementById("con").innerHTML = error.name
+            }
+
+            var a = 2;
+            scp = () => { var b = 4 }
+            document.getElementById("con").innerHTML = b;
 
         }
     </script>
