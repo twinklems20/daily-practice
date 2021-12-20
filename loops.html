@@ -15,6 +15,8 @@
         <p id="errmsg"></p>
 
     <h1 id="con" style="text-align: center;"></h1>
+
+    <button onclick="this.style.display ='none'">CLICK MEEE</button>
     <script>
         {
             // 14th december CONDITIONS, SWITCH, FOR LOOP
@@ -321,8 +323,131 @@
             }
 
             var a = 2;
-            scp = () => { var b = 4 }
-            document.getElementById("con").innerHTML = b;
+            scp = () => { var a = 4 }
+            document.getElementById("con").innerHTML = a;
+
+            // 20th december SCOPE, THIS KEYWORD, CLASSES, INHERITANCE, JSON, DEBUGGER
+
+            let city = "amul"
+            function myFunn () {
+                let car = "SWIFT"
+                // document.getElementById("con").innerHTML = car;
+                document.getElementById("con").innerHTML = city;
+            }
+
+            myFunn()
+            // document.getElementById("con").innerHTML = car
+
+            // "use strict"
+            let t = this
+            document.getElementById("con").innerHTML = t;
+
+            "use strict"
+            function functhis () {
+                return this;
+            }
+            document.getElementById("con").innerHTML = functhis()
+
+
+            const name = {
+                fullname : function() {
+                    return this.fname + " " + this.lname;
+                }
+            }
+
+            const dta = {
+                fname: "Kiraz",
+                lname: "Eda",
+            }
+
+            document.getElementById("con").innerHTML = name.fullname.apply(dta); // use call() also instead of apply()
+
+            class chocolate {
+                constructor (name, prize) {
+                    this.name = name;
+                    this.prize = prize;
+                }
+
+                // class method
+                famous() {
+                    let d = new Date();
+                    return d.getTime();
+                }
+            }
+
+            let toffy = new chocolate("m&s", 10)
+            let candy = new chocolate("Gems", 20)
+
+
+
+            // document.getElementById("con").innerHTML = candy.name + " is " + candy.prize + " ruppees cost" ;
+
+            document.getElementById("con").innerHTML = candy.name + " is popular since " + candy.famous()
+
+
+            class clothes extends chocolate {
+                constructor (name, code) {
+                    super(name);
+                    this.code = 154454
+                }
+                dataa() {
+                    return candy.name + " is having the code " + this.code;
+                }
+            }
+            
+            let clths = new clothes("crop", 1541)
+            document.getElementById("con").innerHTML = clths.dataa()
+
+
+            // GETTERS AND SETTERS METHOD
+            class sea {
+                constructor(name) {
+                    this.seaname = name;
+                }
+                get sname () {
+                    return this.seaname;
+                }
+                set sname (x) {
+                    this.seaname = x;
+                }
+            }
+
+            let mySea = new sea ("Dead sea");
+            mySea.sname = "Atlantic"
+            document.getElementById("con").innerHTML = mySea.sname
+
+            let text = '{"employees":[' +
+            '{"firstName":"John","lastName":"Doe" },' +
+            '{"firstName":"Anna","lastName":"Smith" },' +
+            '{"firstName":"Peter","lastName":"Jones" }]}';
+
+            const obj = JSON.parse(text);
+            document.getElementById("con").innerHTML = "He is " + obj.employees[2].firstName + " " + obj.employees[2].lastName
+
+
+            let arr = '[ "mango", "apple", "cherry" ]';
+            const arr1 = JSON.parse(arr)
+            document.getElementById("con").innerHTML = arr1[2]
+
+            let me = '{"name": "twinkle", "birth": "2000-02-20", "age":"function() {return 20;}"}'
+            const ime = JSON.parse(me);
+            ime.birth = new Date(ime.birth)
+            ime.age = eval("(" + ime.age + ")");
+            // document.getElementById("con").innerHTML = "The date is " + ime.birth
+            document.getElementById("con").innerHTML = "The age is " + ime.age()
+
+            let me1 = {name: "twinkle", today: new Date(), age: function() {return 20;}}
+            const ime1 = JSON.stringify(me1);
+            document.getElementById("con").innerHTML = me1.name
+
+            let arr2 = [ "mango", "apple", "cherry" ];
+            const arr3 = JSON.stringify(arr2)
+            document.getElementById("con").innerHTML = arr2[0]
+
+            me1.age = me1.age.toString();
+            document.getElementById("con").innerHTML = ime1
+
+            debugger;
 
         }
     </script>
