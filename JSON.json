@@ -2,5 +2,9 @@
     "name": "Kiraz",
     "marks": 454,
     "type": true,
-    "items": ["food", "drinks", "cake", "chocolates"]
+    "items": ["food", "drinks", "cake", "chocolates"],
+    "obj": {
+        "name": "Eda",
+        "No": 45465
+    }
 }

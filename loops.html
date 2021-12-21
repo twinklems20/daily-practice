@@ -447,7 +447,37 @@
             me1.age = me1.age.toString();
             document.getElementById("con").innerHTML = ime1
 
-            debugger;
+            // debugger;
+
+            class Car {
+                constructor(name) {
+                    this.name = name;
+                }
+                static hello() {
+                    return "Hello!!";
+                }
+            }
+
+            let myCar = new Car("Ford");
+            // document.getElementById("con").innerHTML = Car.hello()
+            document.getElementById("con").innerHTML = Car.hello(myCar)
+
+            // 21th december STORING DATA, LOCAL STORAGE, 
+
+            localStorage.setItem("lastName", "pihoo");
+            localStorage.setItem("number", 656956)
+            document.getElementById("con").innerHTML = localStorage.getItem("lastName")
+
+            // const listt = ["food", "clothes", "medicine"]
+            const listt = {"food": "pizza", "clothes": "hoodie", "medicine": "pera"}
+            
+            const myJSON = JSON.stringify(listt)
+            localStorage.setItem("testJSON", myJSON)
+
+            // document.getElementById("con").innerHTML = JSON.parse(localStorage.getItem("testJSON"))[0]
+            document.getElementById("con").innerHTML = JSON.parse(localStorage.getItem("testJSON")).food
+            // console.log(JSON.parse(localStorage.getItem("testJSON"))).
+
 
         }
     </script>
