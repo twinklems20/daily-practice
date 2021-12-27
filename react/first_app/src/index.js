@@ -71,7 +71,7 @@ import reportWebVitals from './reportWebVitals';
 // function App2() {
 //   return (   `
 //     <div>
-//       <Welcome name="Rosh" />
+//       <Welcome name="Roshni" />
 //       <Welcome name="Ishita" />
 //       <Welcome name="Krina" />
 //     </div>
@@ -211,10 +211,7 @@ import reportWebVitals from './reportWebVitals';
     document.getElementById('root')
   )
 
-
-
-
-
+  
 
 // ReactDOM.render(
 //   <React.StrictMode>

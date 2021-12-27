@@ -119,7 +119,16 @@ const items = ["Chocolate", "Pastry", "Ice-creame", "Pastry", "Ice-creame"];
 ReactDOM.render(
   // <Gmorning isMorning = {false} />,
   // <Fridge leftItems = {items} />,
-  // <Greet />,
-  <Intro date={intro.date} text={intro.text} author={intro.author} />,
+  <Greet />,
+//   <Intro date={intro.date} text={intro.text} author={intro.author} />,
   document.getElementById("root")
 );
+
+// ReactDOM.render (
+//     [
+//       <h1>hggs</h1>,
+//       <h2>gswghw</h2>,
+//       <h3>wjhjwshnjwkn</h3>
+//     ],
+//     document.getElementById('root')
+//   )
