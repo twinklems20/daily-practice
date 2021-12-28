@@ -116,10 +116,28 @@ function Fridge(props) {
 
 const items = ["Chocolate", "Pastry", "Ice-creame", "Pastry", "Ice-creame"];
 
+
+
+function NumberList(props) {
+  const numbers = props.numbers;
+  const listItems = numbers.map((number) =>
+    <li key={number}>{number}</li>
+  );
+  // const listItems = numbers.map((number, index) =>
+  //   <li key={index}>{number}</li>
+  // );
+  return (
+    <ul>{listItems}</ul>
+  );
+}
+
+const numbers = [10, 20, 30, 40, 50]
+
 ReactDOM.render(
   // <Gmorning isMorning = {false} />,
   // <Fridge leftItems = {items} />,
-  <Greet />,
+  // <Greet />,
+  <NumberList numbers={numbers} />,
 //   <Intro date={intro.date} text={intro.text} author={intro.author} />,
   document.getElementById("root")
 );
