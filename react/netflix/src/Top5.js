@@ -5,9 +5,10 @@ function Top5(props) {
         <>
             <div>
                 <div className="card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG2GHJziBhYRxF8zw9cUJIH6mkt8aqyl3IFg&usqp=CAU" alt="image"/>
+                    <img className="image" src={props.image} alt="image"/>
                     <div>
-                    <h3 className="name">title</h3>
+                    <h2 className="name">{props.title}</h2>
+                    <h3>{props.year}</h3>
                     <a href={props.link}>
                         <button className="btn">Watch Now</button>
                     </a>

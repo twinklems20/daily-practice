@@ -30,16 +30,24 @@ code {
   border: 2px solid transparent;
   width: 350px;
   margin: 10px;
+  text-align: center;
+}
+
+.image {
+  width: 300px;
+  height: 200px;
 }
 
 /* .name {
   text-align: center;
 } */
 
-/* .btn {
+.btn {
   text-align: center !important;
+  margin-top: 15px;
   padding: 10px;
-  background-color: #1F80E0;
-  color: white;
+  /* background-color: #1F80E0; */
+  /* color: white; */
   border-radius: 5px;
-} */
+  cursor: pointer;
+}

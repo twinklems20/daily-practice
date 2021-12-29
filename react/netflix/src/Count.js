@@ -7,7 +7,6 @@ class Count extends Component {
         this.state = {
             count : 0
         }
-        
     }
 
     increament = () => {
@@ -20,7 +19,7 @@ class Count extends Component {
         const {count} = this.state
         return (
             <div>
-                {this.props.render(this.state.count, this.increament)}
+                {this.props.children(this.state.count, this.increament)}
             </div>
         )
     }
