@@ -4,6 +4,10 @@ import ClassCount from './Componenets/ClassCount';
 import HookCount from './Componenets/HookCount';
 import Counters from './Componenets/Counters';
 import HookObj from './Componenets/HookObj';
+import HooksArray from './Componenets/HooksArray';
+import Hookex from './Componenets/Hookex';
+import Useeffect from './Componenets/Useeffect';
+import MouseEffect from './Componenets/MouseEffect';
 
 function App() {
   return (
@@ -12,7 +16,11 @@ function App() {
       {/* <ClassCount /> */}
       {/* <HookCount /> */}
       {/* <Counters /> */}
-      <HookObj />
+      {/* <HookObj /> */}
+      {/* <HooksArray /> */}
+      {/* <Hookex /> */}
+      {/* <Useeffect /> */}
+      <MouseEffect />
 
     </div>
   );
