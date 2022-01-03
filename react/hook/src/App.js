@@ -5,9 +5,15 @@ import HookCount from './Componenets/HookCount';
 import Counters from './Componenets/Counters';
 import HookObj from './Componenets/HookObj';
 import HooksArray from './Componenets/HooksArray';
-import Hookex from './Componenets/Hookex';
+import Hookex from './Componenets/HookexArray';
 import Useeffect from './Componenets/Useeffect';
 import MouseEffect from './Componenets/MouseEffect';
+import HookexArray from './Componenets/HookexArray';
+import './index.css'
+import MouseCln from './Componenets/MouseCln';
+import IntervalEfct from './Componenets/IntervalEfct';
+import DataFetch from './Componenets/DataFetch';
+import UseCallBack from './Componenets/UseCallBack';
 
 function App() {
   return (
@@ -18,9 +24,13 @@ function App() {
       {/* <Counters /> */}
       {/* <HookObj /> */}
       {/* <HooksArray /> */}
-      {/* <Hookex /> */}
+      {/* <HookexArray /> */}
       {/* <Useeffect /> */}
-      <MouseEffect />
+      {/* <MouseEffect /> */}
+      {/* <MouseCln /> */}
+      {/* <IntervalEfct /> */}
+      {/* <DataFetch /> */}
+      <UseCallBack />
 
     </div>
   );

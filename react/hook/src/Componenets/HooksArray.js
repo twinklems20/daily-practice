@@ -1,35 +1,34 @@
 import React, {useState} from 'react'
 
-function HooksArray() {
-    
-    // let i;
-    let items = ["Ice-cream", "Chocolate", "Candy", "cake"];
-    const [value, setValue] = useState(items[0]);
-    const [state, setState] = useState(items[value])
-    
-    const setItems = () => {
-        setValue(value+1)
-        setState(items[value])
-    }
+const HooksArray = () => {
 
-  
-    // function setItems() {
-    //     for(let i = 0; i < items.length; i++) {
-    //         let ab = items[i]
-    //         console.log(ab)
-    //         // console.log(value)
-    //         setValue(items[i])
-    //     }
-    // }
-    
+    const data = [
+        {
+            name: "Twinkle", color: "Blue"
+        },
+        {
+            name: "Kuhu", color: "Pink"  
+        },
+        {
+            name: "Kunal", color: "Pink"  
+        },
+        {
+            name: "Pihoo", color: "Pink"  
+        }
+    ]
+
+    const [myArr, setmyArr] = useState(data)
+
+    // const 
 
     return (
-        <div>
-            <h1>I like {state}</h1>
-            <button onClick={setItems}>CLICK</button>
-           
-        </div>
-        
+        <>
+            {myArr.map((elemnt, index) => {
+                return <h1 className='h1stl' key={index}>{elemnt.name} & color {elemnt.color}</h1>
+            })}
+
+            <button className='btnn' onClick={() => setmyArr([])}>Clear Data</button>
+        </>
     )
 }
 

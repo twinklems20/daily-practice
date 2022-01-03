@@ -17,3 +17,19 @@ code {
   margin: 20px;
   padding: 10px;
 }
+
+
+.h1stl {
+  background-color: skyblue;
+  color: white;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.btnn {
+  margin: 20px;
+  padding: 10px;
+  /* background-color: blueviolet;
+  color: white; */
+}

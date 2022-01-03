@@ -13,8 +13,14 @@ function MouseEffect() {
 
 
     useEffect(() => {
-        console.log("Use Effect");
+        console.log("Use Effect is Working");
         window.addEventListener('mousemove', logMouseMove)
+
+        return () => {
+            console.log("Clean Up Function or Unmount")
+            window.removeEventListener('mousemove', logMouseMove)
+        }  
+
     }, [])
 
     return (
