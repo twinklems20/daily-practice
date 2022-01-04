@@ -14,6 +14,8 @@ import MouseCln from './Componenets/MouseCln';
 import IntervalEfct from './Componenets/IntervalEfct';
 import DataFetch from './Componenets/DataFetch';
 import UseCallBack from './Componenets/UseCallBack';
+import Demo from './Componenets/Demo';
+import Demo1 from './Componenets/Demo1';
 
 function App() {
   return (
@@ -30,7 +32,9 @@ function App() {
       {/* <MouseCln /> */}
       {/* <IntervalEfct /> */}
       {/* <DataFetch /> */}
-      <UseCallBack />
+      {/* <UseCallBack /> */}
+      {/* <Demo /> */}
+      <Demo1 />
 
     </div>
   );

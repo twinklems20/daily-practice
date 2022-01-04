@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.btnStyle button {
+  margin: 10px;
+  padding: 15px;
+}
+
+.calStyle {
+  background-color: purple;
+  color: white;
+}
+
+.inpStyle input {
+  margin: 15px;
+  padding: 10px;
+  background-color: #D5B2FB;
+  color: white;
+  border-radius: 20px;
+  width: 100px;
+}
+
+.calStyle {
+  width: 700px;
+  height: 400px;
+  background-color: #650f7a;
+  color: #D5B2FB;
+  margin: auto;
+}
+
+.calStyle h1 {
+  padding: 20px;
+  color: #D5B2FB;
+}
+
+.calStyle button {
+  margin: 10px;
+  padding: 10px;
+  background-color: var(--bgColor);
+  /* color: white; */
+  font-size: 20px;
+  color: #650f7a;
+}
+
+
+:root{
+  --bgColor:#D5B2FB;
+}
+
+.calStyle h2 {
+  font-size: 100px;
+}
