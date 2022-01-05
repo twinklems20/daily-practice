@@ -1,10 +1,29 @@
-import React, {useState} from 'react'
+import React, {useState, useReducer} from 'react'
+
+// const initialState = 0
+
+// const reducer = (state, action) => {
+//     switch (action) {
+//         case 'addition':
+//             return num1 + num2
+//         case 'substraction':
+//             return num1 + num2
+//         case 'multiplication':
+//             return num1 + num2
+//         case 'division':
+//             return num1 + num2
+//         default :        
+//     }
+// }
 
 function Demo() {
 
     const [numOne, setNumOne] = useState(0)
     const [numTwo, setNumTwo] = useState(0)
     const [total, setTotal] = useState(numOne + numTwo)
+
+    // const [num1, dispatch] = useReducer(reducer, initialState)
+    // const [num2, dispatch] = useReducer(reducer, initialState)
 
     const addition = () => {
         setTotal(numOne + numTwo)
@@ -24,15 +43,15 @@ function Demo() {
 
     return (
         <div className='calStyle'>
-        <h1>Add Two Numbers</h1>
+        <h1>Perform Calculations</h1>
         <div className='inpStyle'>
             <input type= "number" value={numOne} onChange={e => setNumOne(+e.target.value)} />
             <input type= "number" value={numTwo} onChange={e => setNumTwo(+e.target.value)} />
             </div>
-            <button onClick={addition}>ADD THEM</button>
-            <button onClick={substraction}>Substract THEM</button>
-            <button onClick={multiplication}>Multiply THEM</button>
-            <button onClick={division}>Divide THEM</button>
+            <button onClick={addition}>Add Them</button>
+            <button onClick={substraction}>Substract Them</button>
+            <button onClick={multiplication}>Multiply Them</button>
+            <button onClick={division}>Divide Them</button>
             <h2>{total}</h2>
         </div>
     )
