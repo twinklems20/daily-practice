@@ -33,7 +33,7 @@ code {
 
 .calStyle {
   width: 700px;
-  height: 400px;
+  height: 6 0vh;
   background-color: #650f7a;
   color: #D5B2FB;
   margin: auto;
@@ -62,4 +62,5 @@ code {
 
 .calStyle h2 {
   font-size: 10vh;
+  word-wrap: break-word;
 }
