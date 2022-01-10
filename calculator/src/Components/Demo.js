@@ -42,7 +42,7 @@ function Demo() {
     }
 
     return (
-        <div className='calStyle'>
+        <div className='calStyle container'>
         <h1>Perform Calculations</h1>
         <div className='inpStyle'>
             <input type= "number" value={numOne} onChange={e => setNumOne(+e.target.value)} />

@@ -33,6 +33,7 @@ code {
 
 .calStyle {
   width: 700px;
+  /* width: auto; */
   height: 6 0vh;
   background-color: #650f7a;
   color: #D5B2FB;
