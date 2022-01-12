@@ -4,7 +4,7 @@ function Contact() {
 
 
     const onBtnClick = () => {
-        alert("submitted")
+        alert("Your Response Has been Submited")
     }
 
   return (
