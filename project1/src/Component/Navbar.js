@@ -6,7 +6,7 @@ function Navbar() {
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">
+          <Link className="navbar-brand" to="/main">
             DDS
           </Link>
           <button
@@ -39,7 +39,10 @@ function Navbar() {
                 </Link>
               </li>
             </ul>
-            <button className="btn btn-info">Login</button>
+            {/* <button> */}
+            <Link className="btn btn-info m-2" to="/form">Login</Link>
+            <Link className="btn btn-warning m-2" to="/form">Sign Out</Link>
+            {/* </button> */}
           </div>
         </div>
       </nav>
